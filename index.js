@@ -3,10 +3,9 @@ const mysql = require("mysql");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
-const salt =10;
+const salt = 10;
 
 //const { check, validationResult } = require('express-validator');
-
 
 const app = express();
 app.use(cors({
