@@ -124,6 +124,7 @@ db.connect((err) => {
 
 app.post('/signup', (req, res)=>{
     console.log("chla hai")
+            console.log(req.body.email)
     const sql = "INSERT INTO login (`name`, `email`, `password`, `number`) VALUES (?)";
     const hashAlgorithm = 'sha256';
 
@@ -145,6 +146,7 @@ app.post('/signup', (req, res)=>{
             if(err){
                 return  res.json(err);
             }
+                    console.log(result)
             return res.json({Status: "Success"});
         })
     // })
